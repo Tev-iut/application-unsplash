@@ -10,7 +10,7 @@ import Foundation
 struct UnsplashPhoto: Codable, Identifiable {
     let id: String
     let slug: String
-    let author: User?
+    let user: User?
     let urls: UnsplashPhotoUrls
 }
 enum CodingKeys: String, CodingKey {

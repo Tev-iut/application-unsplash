@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3860553A2B6165BD003926AA /* TopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386055392B6165BD003926AA /* TopicView.swift */; };
+		3860553E2B616E4A003926AA /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3860553D2B616E4A003926AA /* ImageView.swift */; };
 		38A9AC302B60EE4B00B97567 /* UnsplashPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9AC2F2B60EE4B00B97567 /* UnsplashPhoto.swift */; };
 		38A9AC322B60F46500B97567 /* PListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9AC312B60F46500B97567 /* PListManager.swift */; };
 		38A9AC342B60F59A00B97567 /* environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38A9AC332B60F59A00B97567 /* environment.plist */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		386055392B6165BD003926AA /* TopicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicView.swift; sourceTree = "<group>"; };
+		3860553D2B616E4A003926AA /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		38A9AC2F2B60EE4B00B97567 /* UnsplashPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhoto.swift; sourceTree = "<group>"; };
 		38A9AC312B60F46500B97567 /* PListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PListManager.swift; sourceTree = "<group>"; };
 		38A9AC332B60F59A00B97567 /* environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = environment.plist; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				38DF46CE2B5FEBF70011747F /* Application_UnsplashApp.swift */,
 				38DF46D02B5FEBF70011747F /* ContentView.swift */,
 				386055392B6165BD003926AA /* TopicView.swift */,
+				3860553D2B616E4A003926AA /* ImageView.swift */,
 				38DF46D22B5FEBF90011747F /* Assets.xcassets */,
 				38DF46D42B5FEBF90011747F /* Preview Content */,
 				38A9AC2F2B60EE4B00B97567 /* UnsplashPhoto.swift */,
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3860553E2B616E4A003926AA /* ImageView.swift in Sources */,
 				38A9AC322B60F46500B97567 /* PListManager.swift in Sources */,
 				38A9AC362B6104E500B97567 /* UnsplashAPI.swift in Sources */,
 				38DF46D12B5FEBF70011747F /* ContentView.swift in Sources */,

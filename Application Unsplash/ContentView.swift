@@ -70,10 +70,12 @@ struct ContentView: View {
                 if (feedState.homeFeed != nil) {
                     LazyVGrid(columns: columns, spacing: 8) {
                         ForEach(feedState.homeFeed!, id: \.id) { photo in
-                            AsyncImage(url: URL(string: photo.urls.raw)!) { image in
-                                image.centerCropped().frame(height: 150).cornerRadius(10.0)
-                            } placeholder: {
-                                Color.gray.frame(height: 150)
+                            NavigationLink (destination: ImageView(image: photo)) {
+                                AsyncImage(url: URL(string: photo.urls.raw)!) { image in
+                                    image.centerCropped().frame(height: 150).cornerRadius(10.0)
+                                } placeholder: {
+                                    Color.gray.frame(height: 150)
+                                }
                             }
                         }
                     }
