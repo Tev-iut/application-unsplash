@@ -20,30 +20,8 @@ extension Image {
 }
 
 struct ContentView: View {
-    @State var imageList: [UnsplashPhoto] = []
-    
-    func loadData() async {
-        // Créez une URL avec la clé d'API
-        let url = URL(string: "https://api.unsplash.com/photos?client_id=\(ConfigurationManager.instance.plistDictionnary.clientId)")!
-        
-        do {
-            // Créez une requête avec cette URL
-            let request = URLRequest(url: url)
-            
-            // Faites l'appel réseau
-            let (data, response) = try await URLSession.shared.data(for: request)
-            
-            // Transformez les données en JSON
-            let deserializedData = try JSONDecoder().decode([UnsplashPhoto].self, from: data)
-            
-            // Mettez à jour l'état de la vue
-            imageList = deserializedData
-            
-        } catch {
-            print("Error: \(error)")
-        }
-    }
-    
+    //@State var imageList: [UnsplashPhoto] = []
+    @StateObject var feedState = FeedState()
     
     let columns = [
         GridItem(.adaptive(minimum: 150)),
@@ -51,24 +29,34 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        
         NavigationStack {
             Button(action: {
                    Task {
-                       await loadData()
+                       await feedState.fetchHomeFeed()
                    }
                }, label: {
                    Text("Load Data")
                })
             ScrollView {
-                LazyVGrid(columns: columns, spacing: 8) {
-                    ForEach(imageList, id: \.id) { photo in
-                        AsyncImage(url: URL(string: photo.urls.full)!) { image in
-                            image.centerCropped().frame(height: 150).cornerRadius(10.0)
-                        } placeholder: {
-                            Color.gray.frame(height: 150)
+                if (feedState.homeFeed != nil) {
+                    LazyVGrid(columns: columns, spacing: 8) {
+                        ForEach(feedState.homeFeed!, id: \.id) { photo in
+                            AsyncImage(url: URL(string: photo.urls.raw)!) { image in
+                                image.centerCropped().frame(height: 150).cornerRadius(10.0)
+                            } placeholder: {
+                                Color.gray.frame(height: 150)
+                            }
                         }
                     }
+                } else {
+                    LazyVGrid(columns: columns, spacing: 8) {
+                        ForEach(0..<12) { _ in
+                            RoundedRectangle(cornerRadius: 10.0)
+                                .frame(height: 150)
+                                .opacity(0.4)
+                        }
+                    }
+                    .redacted(reason: .placeholder)
                 }
             }
             .clipShape(RoundedRectangle(cornerRadius: 10.0))

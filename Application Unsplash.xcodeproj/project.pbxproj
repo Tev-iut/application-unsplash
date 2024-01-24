@@ -10,6 +10,8 @@
 		38A9AC302B60EE4B00B97567 /* UnsplashPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9AC2F2B60EE4B00B97567 /* UnsplashPhoto.swift */; };
 		38A9AC322B60F46500B97567 /* PListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9AC312B60F46500B97567 /* PListManager.swift */; };
 		38A9AC342B60F59A00B97567 /* environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38A9AC332B60F59A00B97567 /* environment.plist */; };
+		38A9AC362B6104E500B97567 /* UnsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9AC352B6104E500B97567 /* UnsplashAPI.swift */; };
+		38A9AC382B613BF800B97567 /* FeedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9AC372B613BF800B97567 /* FeedState.swift */; };
 		38DF46CF2B5FEBF70011747F /* Application_UnsplashApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF46CE2B5FEBF70011747F /* Application_UnsplashApp.swift */; };
 		38DF46D12B5FEBF70011747F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DF46D02B5FEBF70011747F /* ContentView.swift */; };
 		38DF46D32B5FEBF90011747F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38DF46D22B5FEBF90011747F /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 		38A9AC2F2B60EE4B00B97567 /* UnsplashPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhoto.swift; sourceTree = "<group>"; };
 		38A9AC312B60F46500B97567 /* PListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PListManager.swift; sourceTree = "<group>"; };
 		38A9AC332B60F59A00B97567 /* environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = environment.plist; sourceTree = "<group>"; };
+		38A9AC352B6104E500B97567 /* UnsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPI.swift; sourceTree = "<group>"; };
+		38A9AC372B613BF800B97567 /* FeedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedState.swift; sourceTree = "<group>"; };
 		38DF46CB2B5FEBF70011747F /* Application Unsplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Application Unsplash.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DF46CE2B5FEBF70011747F /* Application_UnsplashApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application_UnsplashApp.swift; sourceTree = "<group>"; };
 		38DF46D02B5FEBF70011747F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 				38A9AC2F2B60EE4B00B97567 /* UnsplashPhoto.swift */,
 				38A9AC312B60F46500B97567 /* PListManager.swift */,
 				38A9AC332B60F59A00B97567 /* environment.plist */,
+				38A9AC352B6104E500B97567 /* UnsplashAPI.swift */,
+				38A9AC372B613BF800B97567 /* FeedState.swift */,
 			);
 			path = "Application Unsplash";
 			sourceTree = "<group>";
@@ -148,7 +154,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				38A9AC322B60F46500B97567 /* PListManager.swift in Sources */,
+				38A9AC362B6104E500B97567 /* UnsplashAPI.swift in Sources */,
 				38DF46D12B5FEBF70011747F /* ContentView.swift in Sources */,
+				38A9AC382B613BF800B97567 /* FeedState.swift in Sources */,
 				38A9AC302B60EE4B00B97567 /* UnsplashPhoto.swift in Sources */,
 				38DF46CF2B5FEBF70011747F /* Application_UnsplashApp.swift in Sources */,
 			);
