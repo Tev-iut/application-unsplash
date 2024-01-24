@@ -28,9 +28,10 @@ struct UnsplashAPI {
         
         var baseUrl = unsplashApiBaseUrl()
         baseUrl.path = path
-        baseUrl.queryItems?.append(URLQueryItem(name: "orderBy", value: orderBy))
-        baseUrl.queryItems?.append(URLQueryItem(name: "perPage", value: "\(perPage)"))
+        baseUrl.queryItems?.append(URLQueryItem(name: "order_by", value: orderBy))
+        baseUrl.queryItems?.append(URLQueryItem(name: "per_page", value: "\(perPage)"))
 
         return baseUrl.url
     }
+
 }

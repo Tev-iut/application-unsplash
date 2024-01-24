@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3860553A2B6165BD003926AA /* TopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386055392B6165BD003926AA /* TopicView.swift */; };
 		38A9AC302B60EE4B00B97567 /* UnsplashPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9AC2F2B60EE4B00B97567 /* UnsplashPhoto.swift */; };
 		38A9AC322B60F46500B97567 /* PListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A9AC312B60F46500B97567 /* PListManager.swift */; };
 		38A9AC342B60F59A00B97567 /* environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38A9AC332B60F59A00B97567 /* environment.plist */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		386055392B6165BD003926AA /* TopicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicView.swift; sourceTree = "<group>"; };
 		38A9AC2F2B60EE4B00B97567 /* UnsplashPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhoto.swift; sourceTree = "<group>"; };
 		38A9AC312B60F46500B97567 /* PListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PListManager.swift; sourceTree = "<group>"; };
 		38A9AC332B60F59A00B97567 /* environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = environment.plist; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			children = (
 				38DF46CE2B5FEBF70011747F /* Application_UnsplashApp.swift */,
 				38DF46D02B5FEBF70011747F /* ContentView.swift */,
+				386055392B6165BD003926AA /* TopicView.swift */,
 				38DF46D22B5FEBF90011747F /* Assets.xcassets */,
 				38DF46D42B5FEBF90011747F /* Preview Content */,
 				38A9AC2F2B60EE4B00B97567 /* UnsplashPhoto.swift */,
@@ -158,6 +161,7 @@
 				38DF46D12B5FEBF70011747F /* ContentView.swift in Sources */,
 				38A9AC382B613BF800B97567 /* FeedState.swift in Sources */,
 				38A9AC302B60EE4B00B97567 /* UnsplashPhoto.swift in Sources */,
+				3860553A2B6165BD003926AA /* TopicView.swift in Sources */,
 				38DF46CF2B5FEBF70011747F /* Application_UnsplashApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

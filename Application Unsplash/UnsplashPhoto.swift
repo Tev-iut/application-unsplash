@@ -31,3 +31,13 @@ struct UnsplashPhotoUrls: Codable {
     let small: String
     let thumb: String
 }
+
+struct UnsplashTopic: Codable, Identifiable {
+    let id: String
+    let slug: String
+    let cover_photo: CoverPhoto
+}
+
+struct CoverPhoto: Codable {
+    let urls: UnsplashPhotoUrls
+}

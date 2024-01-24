@@ -32,12 +32,41 @@ struct ContentView: View {
         NavigationStack {
             Button(action: {
                    Task {
+                       await feedState.fetchHomeTopics()
                        await feedState.fetchHomeFeed()
+                       
                    }
                }, label: {
                    Text("Load Data")
                })
             ScrollView {
+                if (feedState.homeTopics != nil) {
+                    
+                    HStack() {
+                            ForEach(feedState.homeTopics!, id: \.id) { topic in
+                                NavigationLink(destination: TopicView(topic: topic)) {
+                                    VStack{
+                                        AsyncImage(url: URL(string: topic.cover_photo.urls.raw)) { image in
+                                            image.centerCropped()
+                                        } placeholder: {
+                                            ProgressView()
+                                        }
+                                        .frame(height: 50).clipShape(RoundedRectangle(cornerRadius: 12))
+                                        Text(topic.slug)
+                                    }
+                                }
+                        }
+                    }
+                } else {
+                    HStack() {
+                        ForEach(1..<4) { _ in
+                            RoundedRectangle(cornerRadius: 12)
+                            .frame(height: 50)}
+                            .foregroundColor(.gray)
+                            .opacity(0.4)
+                    }
+                }
+    
                 if (feedState.homeFeed != nil) {
                     LazyVGrid(columns: columns, spacing: 8) {
                         ForEach(feedState.homeFeed!, id: \.id) { photo in
